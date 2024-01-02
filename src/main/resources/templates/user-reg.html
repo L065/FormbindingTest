@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>使用者註冊資料</h2>
+    <form method="post" th:object="${usermodel}" action="/user-regForm02">
+        <p>帳號:        <input type="text" th:field="*{uname}" name="uname"></p><br>
+        <p>電子郵件信箱: <input type="text" th:field="*{email}" name="email"></p><br>
+        <p>聯絡電話:    <input type="text" th:field="*{mobile}" name="mobile"></p><br>
+        <p>居住地址:    <input type="text" th:field="*{address}" name="address"></p><br>
+
+        <button type="submit" value="註冊">送出註冊資料</button><br>
+        <br>
+        <button type="reset" value="清除">全部清空</button><br>
+    </form>
+</body>
+</html>
